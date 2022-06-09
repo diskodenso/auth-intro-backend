@@ -1,0 +1,37 @@
+{
+  "name": "auth-intro-backend",
+  "version": "1.0.0",
+  "description": "Authorisation and Authentication ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diskodenso/auth-intro-backend.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "bcrypt",
+    "MongoDB",
+    "mongoose",
+    "JWT"
+  ],
+  "author": "Denis Olf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diskodenso/auth-intro-backend/issues"
+  },
+  "homepage": "https://github.com/diskodenso/auth-intro-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.5"
+  }
+}
