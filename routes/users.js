@@ -1,6 +1,11 @@
 // import express
 import express from "express";
-
+// import signUp and logIn
+import { signUp, logIn } from "../controllers/usersControllers.js";
+// import verifyToken
+import { verifyToken } from "../middleware/verifyToken.js";
+// import verifySession 
+import { verifySession } from "../controllers/usersControllers.js";
 // declare router
 const users = express.Router();
 

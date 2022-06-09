@@ -4,7 +4,6 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 // import jwt from jsonwebtoken
 import jwt from "jsonwebtoken";
-import { errorMonitor } from "events";
 
 // ----- CREATE SIGNUP CONTROLLER ----- //
 export const signUp = async (req, res) => {
@@ -71,7 +70,7 @@ export const logIn = async (req, res) => {
   }
 };
 // ----- CREATE GET USER INFO CONTROLLER ----- //
-const getUserInfo = async (req, res) => {
+export const getUserInfo = async (req, res) => {
   try {
     // deconstruct email out of req.user (req.user is newly created in middleware)
     const { email } = req.user;

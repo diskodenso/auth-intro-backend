@@ -1,7 +1,7 @@
 // import mongoose to create model
 import mongoose from "mongoose";
-// import Schema and Model out of mongoose
-import { Schema, model } from "mongoose";
+// deconstruct Schema and Model out of mongoose
+const { Schema, model } = mongoose;
 
 // create new model
 const userSchema = new Schema({

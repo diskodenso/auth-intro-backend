@@ -4,7 +4,10 @@ import 'dotenv/config.js'
 import express from 'express';
 // import cors
 import cors from 'cors';
-
+// import users router
+import users from './routes/users.js';
+// import protectedRoute 
+import protectedRoute from './routes/protectedRoutes.js';
 // call express to initiate express app
 const app = express();
 // call port
@@ -24,8 +27,8 @@ app.use(cors(corsOptions));
 // express.json we need to work with the body
 app.use(express.json());
 // we built our routes into middleware
-app.use("/user", usersRouter);
-app.use("/info", protectedRouter);
+app.use("/user", users);
+app.use("/info", protectedRoute);
 // call listener function
 app.listen(port, () =>console.log(`Server is running on ${port}`));
 
