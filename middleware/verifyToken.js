@@ -12,7 +12,8 @@ export const verifyToken = async (req, res, next) => {
             res.status(401).send("Unauthorized");
         } else {
           // use jwt verify method - gives back payload which was used to create the token
-          const emailBelongingToToken = jwt.verify(
+          // verify checks if token is right
+            const emailBelongingToToken = jwt.verify(
             token,
             process.env.JWT_SECRET
           );
@@ -25,6 +26,5 @@ export const verifyToken = async (req, res, next) => {
             }
         }
     } catch (error) {
-        
     } 
 }
